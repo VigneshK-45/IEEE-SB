@@ -1,0 +1,28 @@
+:root{--bg:#080B16;--sf:#111827;--cy:#67E8F9;--vi:#A78BFA;--mint:#6EE7B7;--amb:#FBBF24;--cor:#FB7185;--tx:#E5E9F5;--mut:#8B95B0;--bd:rgba(255,255,255,.1);color-scheme:dark;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;min-height:100vh;
+background-image:radial-gradient(900px 500px at 85% -10%,rgba(167,139,250,.18),transparent),radial-gradient(700px 500px at 0% 10%,rgba(103,232,249,.13),transparent),linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:auto,auto,40px 40px,40px 40px}
+.mono{font-family:ui-monospace,Menlo,Consolas,monospace}
+.wrap{max-width:1040px;margin:auto;padding:20px 16px 60px}
+.glass{background:linear-gradient(145deg,rgba(255,255,255,.07),rgba(255,255,255,.02));border:1px solid var(--bd);border-radius:16px;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);padding:18px;box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 10px 30px rgba(0,0,0,.3)}
+h1{font-size:clamp(26px,5vw,42px);margin:.2em 0;letter-spacing:-.02em;background:linear-gradient(90deg,var(--cy),var(--vi));-webkit-background-clip:text;background-clip:text;color:transparent}
+h2{margin:0 0 4px;font-size:20px}h3{margin:14px 0 6px;font-size:15px;color:var(--cy)}p{margin:6px 0}.mut{color:var(--mut)}
+.nav{display:flex;gap:8px;overflow-x:auto;padding:4px 0 14px}
+.tab{flex:0 0 auto;border:1px solid var(--bd);background:rgba(255,255,255,.04);color:var(--tx);padding:8px 14px;border-radius:999px;cursor:pointer;font:inherit;font-size:13px;transition:.2s}
+.tab:hover:not(:disabled){border-color:var(--cy)}.tab.on{background:rgba(103,232,249,.15);border-color:var(--cy);color:var(--cy)}.tab:disabled{opacity:.4;cursor:not-allowed}
+button.b{background:linear-gradient(135deg,var(--cy),var(--vi));color:#06101c;border:0;border-radius:10px;padding:9px 16px;font:inherit;font-weight:600;cursor:pointer;transition:.2s}
+button.b:hover{filter:brightness(1.1);transform:translateY(-1px)}button.g{background:transparent;color:var(--tx);border:1px solid var(--bd);border-radius:10px;padding:8px 14px;font:inherit;cursor:pointer}button.g:hover{border-color:var(--vi)}
+button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--cy);outline-offset:2px}
+button:disabled{opacity:.5;cursor:not-allowed}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.badge{font-size:11px;padding:2px 9px;border-radius:99px;border:1px solid var(--bd)}.ok{color:var(--mint);border-color:var(--mint)}.warn{color:var(--amb);border-color:var(--amb)}.bad{color:var(--cor);border-color:var(--cor)}
+.node{cursor:pointer;border:1px solid var(--bd);border-radius:12px;padding:10px 12px;background:rgba(255,255,255,.04);transition:.2s;text-align:left;color:var(--tx);font:inherit;width:100%}
+.node:hover{border-color:var(--cy)}.node.sel{border-color:var(--cy);box-shadow:0 0 18px rgba(103,232,249,.25)}
+table{width:100%;border-collapse:collapse;font-size:14px}th,td{padding:8px;border-bottom:1px solid var(--bd);text-align:center}th:first-child,td:first-child{text-align:left}
+.scroll{overflow-x:auto}
+textarea,input[type=text],select{width:100%;background:rgba(0,0,0,.3);border:1px solid var(--bd);border-radius:10px;color:var(--tx);padding:9px;font:inherit}
+.msg{margin-top:10px;padding:10px 12px;border-radius:10px;border:1px solid var(--bd);font-size:14px}
+.bar{height:6px;border-radius:9px;background:rgba(255,255,255,.08);overflow:hidden}.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--cy),var(--vi))}
+.ev{display:flex;gap:8px;align-items:center;justify-content:space-between}
+@media print{body{background:#fff;color:#000}.nav,.noprint{display:none}.glass{border:1px solid #999;background:#fff;box-shadow:none}h1,h3{color:#000;background:none}}
